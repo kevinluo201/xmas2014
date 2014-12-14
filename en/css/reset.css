@@ -1,0 +1,5 @@
+body, div, ul, ol, li, h1, h2, h3, h4, h5, h6, form, input, button,textarea, p, blockquote {
+margin: 0;padding: 0;}
+
+ol, ul, li {list-style: none;}
+:link, :visited , ins {text-decoration: none;}
