@@ -2,7 +2,6 @@ window.onload = function () {
   for(var i = 1; i <=16; i++) {
     var pos = "pos" + ((i < 10)? "0" + i : i);
     var img = document.getElementById(pos);
-    console.log(img.src);
     img.src = decideImg(pos, img.src);
   }
 }
