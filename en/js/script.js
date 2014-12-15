@@ -17,5 +17,18 @@ $(document).ready(function(){
 		/* Preventing the default event (which would be to navigate the browser to the link's address) */
 		e.preventDefault();
 	})
-	
+
+	radios = document.getElementsByName("winTeam");
+	for(var i = 0; i < radios.length; i++) {
+		radios[i].onclick = decideWinteam;
+	}
 });
+
+function currentPos() {
+	return location.pathname.substring(location.pathname.lastIndexOf("_")).substring(1,3);
+}
+
+function decideWinteam() {
+	win = $('input[name="winTeam"]:checked').val();
+	localStorage["pos" + currentPos()] = win;
+}
